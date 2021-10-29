@@ -1,7 +1,7 @@
 dependencies:
   - name: neo4j
     version: 0.8.0
-    repository: https://kubernetes-charts.storage.googleapis.com/
+    repository: '@stable'
     condition: neo4j.enabled
     tags:
       - neo4j

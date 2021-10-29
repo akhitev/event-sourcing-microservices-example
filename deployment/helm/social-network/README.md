@@ -36,8 +36,9 @@ cd social-network-example
 Add the bitnami helm repository which contains the `kafka` and `zookeeper` charts:
 
 ```bash
-helm repo add bitnami https://charts.bitnami.com
-helm repo add incubator https://kubernetes-charts-incubator.storage.googleapis.com
+helm repo add bitnami https://charts.bitnami.com/bitnami
+helm repo add incubator https://charts.helm.sh/incubator
+helm repo add stable https://charts.helm.sh/stable
 ```
 
 ## Update Dependencies
