@@ -76,8 +76,7 @@ grafana:
           connMaxLifetime: 14400
           postgresVersion: 1000
           timescaledb: false
-  dashboardsConfigMaps:
-    spring: social-network-grafana-dashboard-spring
+  dashboardsConfigMaps: {}
   dashboardProviders:
     dashboardproviders.yaml:
       apiVersion: 1

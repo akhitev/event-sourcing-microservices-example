@@ -1,7 +1,7 @@
 dependencies:
   - name: neo4j
-    version: 0.8.0
-    repository: '@stable'
+    version: 4.3.6
+    repository: '@neo4j-helm'
     condition: neo4j.enabled
     tags:
       - neo4j

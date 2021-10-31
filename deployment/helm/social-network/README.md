@@ -16,29 +16,16 @@ vm-0f68c2fd-cff9-4c23-4387-2373bd2b4ae3   Ready     <none>    7d        v1.11.5
 vm-ab234512-d336-4f5a-495a-a917657575c1   Ready     <none>    7d        v1.11.5
 ```
 
-Install helm tiller (RBAC):
-
-```bash
-kubectl -n kube-system create serviceaccount tiller
-kubectl create clusterrolebinding tiller \
-  --clusterrole cluster-admin \
-  --serviceaccount=kube-system:tiller
-helm init --service-account=tiller
-```
-
-Clone this repo locally:
-
-```bash
-git clone https://github.com/hyperskale/social-network-example.git
-cd social-network-example
-```
-
 Add the bitnami helm repository which contains the `kafka` and `zookeeper` charts:
 
 ```bash
 helm repo add bitnami https://charts.bitnami.com/bitnami
 helm repo add incubator https://charts.helm.sh/incubator
 helm repo add stable https://charts.helm.sh/stable
+helm repo add neo4j-helm https://neo4j-contrib.github.io/neo4j-helm/
+helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+helm repo add kube-state-metrics https://kubernetes.github.io/kube-state-metrics
+
 ```
 
 ## Update Dependencies
@@ -58,7 +45,7 @@ helm dep update deployment/helm/recommendation-service
 Once Helm is set up, deploying this is quite simple:
 
 ```bash
-helm install --namespace social-network --name social-network --set fullNameOverride=social-network \
+helm install --namespace social-network social-network --set fullNameOverride=social-network \
   deployment/helm/social-network
 ```
 

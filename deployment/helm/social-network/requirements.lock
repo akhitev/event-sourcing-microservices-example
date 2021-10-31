@@ -1,13 +1,13 @@
 dependencies:
 - name: kafka
-  repository: https://charts.helm.sh/incubator
-  version: 0.13.3
+  repository: https://charts.bitnami.com/bitnami
+  version: 14.2.5
 - name: prometheus
-  repository: https://charts.helm.sh/stable
-  version: 8.3.0
+  repository: https://prometheus-community.github.io/helm-charts
+  version: 14.11.0
 - name: grafana
-  repository: https://charts.helm.sh/stable
-  version: 1.21.2
+  repository: https://charts.bitnami.com/bitnami
+  version: 7.0.6
 - name: edge-service
   repository: file://../edge-service
   version: 0.1.0
@@ -20,5 +20,5 @@ dependencies:
 - name: user-service
   repository: file://../user-service
   version: 0.2.0
-digest: sha256:f928db7a054527c3127e49319532ab13dd0a1a648a3809c7e2aa21a21b319592
-generated: "2021-10-29T00:59:25.11045169+03:00"
+digest: sha256:13f3cbb8368c431dd983ea55769a8f81ba747c5206588be15fa7b63b50ca76ac
+generated: "2021-11-01T00:08:33.972457437+03:00"

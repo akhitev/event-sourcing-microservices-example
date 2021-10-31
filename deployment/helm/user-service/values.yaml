@@ -35,11 +35,14 @@ resources: {}
   #  cpu: 100m
   #  memory: 128Mi
 
-nodeSelector: {}
 
-tolerations: []
 
-affinity: {}
+
+master:
+  affinity: {}
+  tolerations: []
+  nodeSelector: {}
+
 
 postgresql:
   enabled: true
